@@ -1,3 +1,20 @@
+介绍
+这是一个基于SpringBoot + Vue开发的前后端分离博客项目。
+
+技术栈：
+前端：
+vue
+route
+element-ui
+axios
+后端：
+Springboot
+mybatis plus
+shiro
+redis
+Hibernate validatior
+jwt
+
 vueblog-vue运行需要安装:
 npm i element-ui
 npm i axios
