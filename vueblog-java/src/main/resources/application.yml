@@ -12,9 +12,3 @@ lmjhub:
     # token有效时长，7天，单位秒
     expire: 604800
     header: Authorization
-spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql:///vueblog?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: root
-    password: lvmingji

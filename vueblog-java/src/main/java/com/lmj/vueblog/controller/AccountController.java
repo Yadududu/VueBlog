@@ -98,7 +98,7 @@ public class AccountController {
                 }
             }
         }
-        System.out.println(user.getRoles());
+//        System.out.println(user.getRoles());
 
         return Result.succ(MapUtil.builder()
                 .put("id", user.getId())

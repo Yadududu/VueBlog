@@ -5,6 +5,7 @@ import com.lmj.vueblog.common.lang.Result;
 import com.lmj.vueblog.entity.User;
 import com.lmj.vueblog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,9 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
+    @Value("${project.env}")
+    private String projectEnv;
 
 //    @RequiresAuthentication
     @GetMapping("/user")
@@ -35,5 +39,10 @@ public class UserController {
     @RequestMapping("/index")
     public String index() {
         return "/index";
+    }
+
+    @GetMapping("env")
+    public String env() {
+        return "当前环境为：" + projectEnv;
     }
 }

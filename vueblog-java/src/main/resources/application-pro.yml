@@ -1,0 +1,14 @@
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://mysql:3306/vueblog?serverTimezone=UTC
+    url: jdbc:mysql:///vueblog?serverTimezone=Asia/Shanghai
+    username: root
+    password: lvmingji
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: redis:6379
+project:
+  env: pro

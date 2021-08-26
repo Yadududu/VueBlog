@@ -44,6 +44,7 @@ public class ShiroConfig {
         // 所有的路由都需要经过JwtFilter这个过滤器，然后判断请求头中是否含有jwt的信息，有就登录，没有就跳过。
         // 跳过之后，有Controller中的shiro注解进行再次拦截，
         filters.put("jwt", new JwtFilter());
+//        filters.put("jwt", jwtFilter);
         shiroFilter.setFilters(filters);
 
         Map<String, String> filterMap = shiroFilterChainDefinition.getFilterChainMap();
@@ -83,7 +84,7 @@ public class ShiroConfig {
         securityManager.setSessionManager(sessionManager);
 
         // inject redisCacheManager
-//        securityManager.setCacheManager(redisCacheManager);
+        securityManager.setCacheManager(redisCacheManager);
         return securityManager;
     }
     @Bean
@@ -92,7 +93,7 @@ public class ShiroConfig {
         DefaultWebSessionManager sessionManager = new DefaultWebSessionManager();
 
         // inject redisSessionDAO
-//        sessionManager.setSessionDAO(redisSessionDAO);
+        sessionManager.setSessionDAO(redisSessionDAO);
         return sessionManager;
     }
 
