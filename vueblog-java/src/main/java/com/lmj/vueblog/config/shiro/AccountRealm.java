@@ -110,7 +110,7 @@ public class AccountRealm extends AuthorizingRealm {
         //AccountProfile，为了登录成功之后返回的一个用户信息的载体
         AccountProfile profile = new AccountProfile();
         BeanUtil.copyProperties(user, profile);
-        // Token认证
+        // Token认证,这里不是标准写法,第一个参数应该填token,不然设置缓存后,登出删除不了信息
         return new SimpleAuthenticationInfo(profile, jwtToken.getCredentials(), getName());
     }
 }

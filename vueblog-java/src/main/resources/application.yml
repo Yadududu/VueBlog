@@ -3,6 +3,9 @@
 #    active: pro
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**Mapper.xml
+  #配置日志
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 server:
   port: 8081
 lmjhub:
@@ -12,3 +15,5 @@ lmjhub:
     # token有效时长，7天，单位秒
     expire: 604800
     header: Authorization
+
+

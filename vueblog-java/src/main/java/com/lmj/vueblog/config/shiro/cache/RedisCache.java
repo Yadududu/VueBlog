@@ -35,11 +35,13 @@ public class RedisCache<K,V> implements Cache<K,V> {
 
     @Override
     public V remove(K k) throws CacheException {
+        System.out.println("========remove缓存============"+this.cacheName+"========"+k.toString());
         return (V) getRedisTemplate().opsForHash().delete(this.cacheName,k.toString());
     }
 
     @Override
     public void clear() throws CacheException {
+        System.out.println("========clear缓存============");
         getRedisTemplate().delete(this.cacheName);
     }
 

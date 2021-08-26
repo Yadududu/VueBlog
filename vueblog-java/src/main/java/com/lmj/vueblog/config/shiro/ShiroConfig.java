@@ -84,7 +84,7 @@ public class ShiroConfig {
         securityManager.setSessionManager(sessionManager);
 
         // inject redisCacheManager
-        securityManager.setCacheManager(redisCacheManager);
+//        securityManager.setCacheManager(redisCacheManager);
         return securityManager;
     }
     @Bean
@@ -109,17 +109,17 @@ public class ShiroConfig {
 //        credentialsMatcher.setHashIterations(ShiroConstant.HASH_ITERATORS);
 //        customerRealm.setCredentialsMatcher(credentialsMatcher);
 
-//        // 设置缓存管理器
+        // 设置缓存管理器
 //        customerRealm.setCacheManager(new EhCacheManager());
-//        customerRealm.setCacheManager(new com.markerhub.config.shiro.cache.RedisCacheManager());
-//        // 开启全局缓存
-//        customerRealm.setCachingEnabled(true);
-//        // 开启认证缓存并指定缓存名称
-//        customerRealm.setAuthenticationCachingEnabled(true);
-//        customerRealm.setAuthenticationCacheName("authenticationCache");
-//        // 开启授权缓存并指定缓存名称
-//        customerRealm.setAuthorizationCachingEnabled(true);
-//        customerRealm.setAuthorizationCacheName("authorizationCache");
+        customerRealm.setCacheManager(new com.lmj.vueblog.config.shiro.cache.RedisCacheManager());
+        // 开启全局缓存
+        customerRealm.setCachingEnabled(true);
+        // 开启认证缓存并指定缓存名称
+        customerRealm.setAuthenticationCachingEnabled(true);
+        customerRealm.setAuthenticationCacheName("authenticationCache");
+        // 开启授权缓存并指定缓存名称
+        customerRealm.setAuthorizationCachingEnabled(true);
+        customerRealm.setAuthorizationCacheName("authorizationCache");
         return customerRealm;
     }
 }
