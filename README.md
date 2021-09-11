@@ -3,17 +3,17 @@
 
 技术栈：  
 前端：  
-vue  
-route  
-element-ui  
-axios  
+1.vue  
+2.route  
+3.element-ui  
+4.axios  
 后端：  
-Springboot  
-mybatis plus  
-shiro  
-redis  
-Hibernate validatior  
-jwt  
+1.Springboot  
+2.mybatis plus  
+3.shiro  
+4.redis  
+5.Hibernate validatior  
+6.jwt  
 
 前端说明：  
 vueblog-vue运行需要安装:  
