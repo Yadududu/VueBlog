@@ -1,28 +1,29 @@
 介绍
 这是一个基于SpringBoot + Vue开发的前后端分离博客项目。
 
-技术栈：
-前端：
-vue
-route
-element-ui
-axios
-后端：
-Springboot
-mybatis plus
-shiro
-redis
-Hibernate validatior
-jwt
+技术栈：  
+前端：  
+vue  
+route  
+element-ui  
+axios  
+后端：  
+Springboot  
+mybatis plus  
+shiro  
+redis  
+Hibernate validatior  
+jwt  
 
-vueblog-vue运行需要安装:
-npm i element-ui
-npm i axios
-npm i mavon-editor(编辑器)
-npm i markdown-it(解释md文档)
-npm i github-markdown-css(md样式)
+vueblog-vue运行需要安装:  
+npm i element-ui  
+npm i axios  
+npm i mavon-editor(编辑器)  
+npm i markdown-it(解释md文档)  
+npm i github-markdown-css(md样式)  
 
-部署到服务器使用nginx代理,nginx配置:
+部署到服务器使用nginx代理,nginx配置:  
+```
 server {
 	listen      80;
 	server_name  testvue.mylmj.top www.testvue.mylmj.top;
@@ -40,3 +41,4 @@ server {
 	}
 
 }
+```
